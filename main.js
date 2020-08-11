@@ -16,10 +16,36 @@ class Traveler {
             this.food = this.food - 1
         }
     }
-
-
 }
+class Doctor extends Traveler {
+    constructor(name, food, isHealthy, heal) {
+        super(name, food, isHealthy)
+        this.heal = '';
+    }
+    heal() {
+        this.isHealthy = true
+    }
+    
+    
+}
+class Hunter extends Traveler {
+    constructor(name, food, isHealthy, hunt) {
+        super(name, food, isHealthy)
+        this.giveFood = ''
+    }
+    hunt() {
+        this.food = this.food + 5
+    }
+    eat() {
 
+        if (this.food === 0) {
+            this.isHealthy = false
+        }
+        else {
+            this.food = this.food - 2
+        }
+    }
+}
 class Wagon {
 
     constructor(capacity) {
