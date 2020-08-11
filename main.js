@@ -20,7 +20,7 @@ class Traveler {
 class Doctor extends Traveler {
     constructor(name, food, isHealthy, heal) {
         super(name, food, isHealthy)
-        this.heal = '';
+        this.heal = heal;
     }
     heal() {
         this.isHealthy = true
@@ -45,6 +45,7 @@ class Hunter extends Traveler {
             this.food = this.food - 2
         }
     }
+    
 }
 class Wagon {
 
@@ -70,10 +71,11 @@ class Wagon {
         }
         return false
     }
-    totalFood() {
-
+    totalFood(food) {
+        for (let a = 0; a < this.passengers.length; a++){
+             this.totalFood [this.food ++] = this.totalFood
+        }
     }
-
 }
 
 
